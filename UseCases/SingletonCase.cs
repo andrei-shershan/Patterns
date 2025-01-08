@@ -4,38 +4,54 @@ namespace Patterns.UseCases
 {
     internal class SingletonCase
     {
-        public void Run()
+        public void UnsafeCase()
         {
-            var incrementor = new Incrementor();
-            var multiplier = new Multiplier();
-
-            incrementor.AddToCounter(10);
-            multiplier.Multiply(2);
+            IncrementUnsafeSingletonCounter(10);
+            MultiplyUnsafeSingletonCounter(2);
 
             if (SignletonUnsafe.Instance.Counter == 20)
             {
-                System.Console.WriteLine("Singleton works, the counter is 20");
+                Console.WriteLine("Unsafe Singleton works, the counter is 20");
             }
             else
             {
-                System.Console.WriteLine("Singleton failed, the counter is not 20");
+                Console.WriteLine("Unsafe Singleton failed, the counter is not 20");
             }
         }
-    }
 
-    internal class Incrementor
-    {
-        public void AddToCounter(int i)
+        public void LazyCase()
+        {
+            IncrementLazySingletonCounter(10);
+            MultiplyLazySingletonCounter(2);
+
+            if (SignletonUnsafe.Instance.Counter == 20)
+            {
+                Console.WriteLine("Lazy Singleton works, the counter is 20");
+            }
+            else
+            {
+                Console.WriteLine("Lazy Singleton failed, the counter is not 20");
+            }
+        }
+
+        private void IncrementUnsafeSingletonCounter(int i)
         {
             SignletonUnsafe.Instance.Counter += i;
         }
-    }
 
-    internal class Multiplier
-    {
-        public void Multiply(int i)
+        private void IncrementLazySingletonCounter(int i)
         {
-            SignletonUnsafe.Instance.Counter *= i;
+            SingletonLazy.Instance.Counter += i;
+        }
+
+        private void MultiplyUnsafeSingletonCounter(int multiplier)
+        {
+            SignletonUnsafe.Instance.Counter *= multiplier;
+        }
+
+        private void MultiplyLazySingletonCounter(int multiplier)
+        {
+            SingletonLazy.Instance.Counter *= multiplier;
         }
     }
 }
