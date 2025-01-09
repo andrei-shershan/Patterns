@@ -2,14 +2,30 @@
 
 namespace Patterns.UseCases
 {
-    internal class SingletonCase
+    internal class UnsafeSingletonCaseCreateor : UseCaseCreator
     {
-        public void UnsafeCase()
+        public override IUseCase Create()
         {
-            IncrementUnsafeSingletonCounter(10);
-            MultiplyUnsafeSingletonCounter(2);
+            return new UnsafeSingletonCase();
+        }
+    }
 
-            if (SignletonUnsafe.Instance.Counter == 20)
+    internal class LazySingletonCaseCreateor : UseCaseCreator
+    {
+        public override IUseCase Create()
+        {
+            return new LazySingletonCase();
+        }
+    }
+
+    internal class UnsafeSingletonCase : IUseCase
+    {
+        public void Run()
+        {
+            SingletonUnsafe.Instance.IncrementCounter(10);
+            SingletonUnsafe.Instance.MultiplyCounter(2);
+
+            if (SingletonUnsafe.Instance.Counter == 20)
             {
                 Console.WriteLine("Unsafe Singleton works, the counter is 20");
             }
@@ -19,39 +35,24 @@ namespace Patterns.UseCases
             }
         }
 
-        public void LazyCase()
-        {
-            IncrementLazySingletonCounter(10);
-            MultiplyLazySingletonCounter(2);
+    }
 
-            if (SignletonUnsafe.Instance.Counter == 20)
+    internal class LazySingletonCase : IUseCase
+    {
+        public void Run()
+        {
+            SingletonLazy.Instance.IncrementCounter(10);
+            SingletonLazy.Instance.MultiplyCounter(2);
+
+            if (SingletonLazy.Instance.Counter == 20)
             {
-                Console.WriteLine("Lazy Singleton works, the counter is 20");
+                Console.WriteLine("Unsafe Singleton works, the counter is 20");
             }
             else
             {
-                Console.WriteLine("Lazy Singleton failed, the counter is not 20");
+                Console.WriteLine("Unsafe Singleton failed, the counter is not 20");
             }
-        }
-
-        private void IncrementUnsafeSingletonCounter(int i)
-        {
-            SignletonUnsafe.Instance.Counter += i;
-        }
-
-        private void IncrementLazySingletonCounter(int i)
-        {
-            SingletonLazy.Instance.Counter += i;
-        }
-
-        private void MultiplyUnsafeSingletonCounter(int multiplier)
-        {
-            SignletonUnsafe.Instance.Counter *= multiplier;
-        }
-
-        private void MultiplyLazySingletonCounter(int multiplier)
-        {
-            SingletonLazy.Instance.Counter *= multiplier;
         }
     }
 }
+
