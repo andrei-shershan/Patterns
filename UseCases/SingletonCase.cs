@@ -22,6 +22,7 @@ namespace Patterns.UseCases
     {
         public void Run()
         {
+            Console.WriteLine(nameof(UnsafeSingletonCase));
             SingletonUnsafe.Instance.IncrementCounter(10);
             SingletonUnsafe.Instance.MultiplyCounter(2);
 
@@ -41,6 +42,8 @@ namespace Patterns.UseCases
     {
         public void Run()
         {
+            Console.WriteLine(nameof(LazySingletonCase));
+
             SingletonLazy.Instance.IncrementCounter(10);
             SingletonLazy.Instance.MultiplyCounter(2);
 
