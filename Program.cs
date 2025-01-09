@@ -14,6 +14,9 @@ namespace Patterns
 
             var fabricMethodCase = new FabricMethodCase();
             fabricMethodCase.Run();
+
+            var abstractFactoryCase = new AbstractFactoryCase();
+            abstractFactoryCase.Run();
         }
     }
 }

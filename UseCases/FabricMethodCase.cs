@@ -6,6 +6,8 @@ namespace Patterns.UseCases
     {
         public void Run()
         {
+            Console.WriteLine(nameof(FabricMethodCase));
+
             var creatorA = new ConcrentCreatorA();
             var creatorB = new ConcrentCreatorB();
 
