@@ -7,8 +7,14 @@ namespace Patterns
         static void Main(string[] args)
         {
             var signletonCase = new SingletonCase();
+            signletonCase.Run();
+
             signletonCase.UnsafeCase();
             signletonCase.LazyCase();
+
+            var fabricMethodCase = new FabricMethodCase();
+            fabricMethodCase.Run();
+
         }
     }
 }
