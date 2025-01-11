@@ -20,6 +20,9 @@ namespace Patterns
             
             var builderCase = new BuilderCase();
             builderCase.Run();
+
+            var prototypeCase = new PrototypeCase();
+            prototypeCase.Run();
         }
     }
 }
