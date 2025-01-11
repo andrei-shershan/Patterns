@@ -17,6 +17,9 @@ namespace Patterns
 
             var abstractFactoryCase = new AbstractFactoryCase();
             abstractFactoryCase.Run();
+            
+            var builderCase = new BuilderCase();
+            builderCase.Run();
         }
     }
 }
