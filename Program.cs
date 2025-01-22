@@ -26,6 +26,9 @@ namespace Patterns
 
             var adapterCase = new AdapterCase();
             adapterCase.Run();
+
+            var bridgeCase = new BridgeCase();
+            bridgeCase.Run();
         }
     }
 }
