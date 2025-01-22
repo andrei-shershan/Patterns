@@ -29,6 +29,9 @@ namespace Patterns
 
             var bridgeCase = new BridgeCase();
             bridgeCase.Run();
+
+            var compositeCase = new CompositeCase();
+            compositeCase.Run();
         }
     }
 }
