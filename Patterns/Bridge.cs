@@ -1,11 +1,11 @@
 ﻿namespace Patterns.Patterns
 {
-    public interface IMessageger
+    public interface IMessager
     {
         void SendMessage();
     }
 
-    public class EmailMessage : IMessageger
+    public class EmailMessager : IMessager
     {
         public void SendMessage()
         {
@@ -13,7 +13,7 @@
         }
     }
 
-    public class SmsMessage : IMessageger
+    public class SmsMessager : IMessager
     {
         public void SendMessage()
         {
@@ -23,9 +23,9 @@
 
     public abstract class Notification
     {
-        protected IMessageger _messageger;
+        protected IMessager _messageger;
 
-        public Notification(IMessageger messageger)
+        public Notification(IMessager messageger)
         {
             _messageger = messageger;
         }
@@ -35,7 +35,7 @@
 
     public class ReminderNotification : Notification
     {
-        public ReminderNotification(IMessageger messageger) : base(messageger)
+        public ReminderNotification(IMessager messageger) : base(messageger)
         {
         }
 
@@ -48,7 +48,7 @@
 
     public class AlertNotification : Notification
     {
-        public AlertNotification(IMessageger messageger) : base(messageger)
+        public AlertNotification(IMessager messageger) : base(messageger)
         {
         }
 

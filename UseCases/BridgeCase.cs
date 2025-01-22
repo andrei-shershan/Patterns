@@ -8,8 +8,8 @@ namespace Patterns.UseCases
         {
             Console.WriteLine(nameof(BridgeCase));
 
-            var emailMessage = new EmailMessage();
-            var smsMessage = new SmsMessage();
+            var emailMessage = new EmailMessager();
+            var smsMessage = new SmsMessager();
 
             var reminderNotification = new ReminderNotification(emailMessage);
             reminderNotification.Notify();
