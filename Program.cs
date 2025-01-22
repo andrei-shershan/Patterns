@@ -23,6 +23,9 @@ namespace Patterns
 
             var prototypeCase = new PrototypeCase();
             prototypeCase.Run();
+
+            var adapterCase = new AdapterCase();
+            adapterCase.Run();
         }
     }
 }
