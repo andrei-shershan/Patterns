@@ -35,6 +35,9 @@ namespace Patterns
 
             var decoratorCase = new DecoratorCase();
             decoratorCase.Run();
+
+            var facadeCase = new FacadeCase();
+            facadeCase.Run();
         }
     }
 }
