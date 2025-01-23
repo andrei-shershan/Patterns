@@ -32,6 +32,9 @@ namespace Patterns
 
             var compositeCase = new CompositeCase();
             compositeCase.Run();
+
+            var decoratorCase = new DecoratorCase();
+            decoratorCase.Run();
         }
     }
 }
