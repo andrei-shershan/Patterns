@@ -38,6 +38,9 @@ namespace Patterns
 
             var facadeCase = new FacadeCase();
             facadeCase.Run();
+
+            var proxyCase = new ProxyCase();
+            proxyCase.Run();
         }
     }
 }
