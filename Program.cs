@@ -47,6 +47,9 @@ namespace Patterns
 
             var commandCase = new CommandCase();
             commandCase.Run();
+
+            var iteratorCase = new IteratorCase();
+            iteratorCase.Run();
         }
     }
 }
