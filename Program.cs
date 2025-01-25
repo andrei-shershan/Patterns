@@ -41,6 +41,9 @@ namespace Patterns
 
             var proxyCase = new ProxyCase();
             proxyCase.Run();
+
+            var chainOfResponsobilityCase = new ChainOfResponsobilityCase();
+            chainOfResponsobilityCase.Run();
         }
     }
 }
