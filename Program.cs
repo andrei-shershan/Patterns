@@ -17,7 +17,7 @@ namespace Patterns
 
             var abstractFactoryCase = new AbstractFactoryCase();
             abstractFactoryCase.Run();
-            
+
             var builderCase = new BuilderCase();
             builderCase.Run();
 
@@ -56,6 +56,9 @@ namespace Patterns
 
             var mementoCase = new MementoCase();
             mementoCase.Run();
+
+            var observerCase = new ObserverCase();
+            observerCase.Run();
         }
     }
 }
