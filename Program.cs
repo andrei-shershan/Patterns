@@ -68,6 +68,9 @@ namespace Patterns
 
             var templateMethodCase = new TemplateMethodCase();
             templateMethodCase.Run();
+
+            var visitorCase = new VisitorCase();
+            visitorCase.Run();
         }
     }
 }
