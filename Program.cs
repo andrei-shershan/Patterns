@@ -65,6 +65,9 @@ namespace Patterns
 
             var strategyCase = new StrategyCase();
             strategyCase.Run();
+
+            var templateMethodCase = new TemplateMethodCase();
+            templateMethodCase.Run();
         }
     }
 }
