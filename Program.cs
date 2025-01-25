@@ -50,6 +50,9 @@ namespace Patterns
 
             var iteratorCase = new IteratorCase();
             iteratorCase.Run();
+
+            var mediatorCase = new MediatorCase();
+            mediatorCase.Run();
         }
     }
 }
