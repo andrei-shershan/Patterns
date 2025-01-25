@@ -62,6 +62,9 @@ namespace Patterns
 
             var stateCase = new StateCase();
             stateCase.Run();
+
+            var strategyCase = new StrategyCase();
+            strategyCase.Run();
         }
     }
 }
