@@ -46,7 +46,7 @@
                 var data = _dataService.GetData();
 
                 _cachedData.Value = data;
-                _cachedData.ExpirationDate = DateTime.Now.AddMicroseconds(300);
+                _cachedData.ExpirationDate = DateTime.Now.AddMilliseconds(300);
 
                 return data;
             }
