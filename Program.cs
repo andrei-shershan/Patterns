@@ -53,6 +53,9 @@ namespace Patterns
 
             var mediatorCase = new MediatorCase();
             mediatorCase.Run();
+
+            var mementoCase = new MementoCase();
+            mementoCase.Run();
         }
     }
 }
