@@ -44,6 +44,9 @@ namespace Patterns
 
             var chainOfResponsobilityCase = new ChainOfResponsobilityCase();
             chainOfResponsobilityCase.Run();
+
+            var commandCase = new CommandCase();
+            commandCase.Run();
         }
     }
 }

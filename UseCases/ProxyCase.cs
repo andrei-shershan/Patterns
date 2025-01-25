@@ -15,7 +15,7 @@ namespace Patterns.UseCases
                 for (var i = 0; i < 5; i++)
                 {
                     Console.WriteLine(proxy.GetData());
-                    await Task.Delay(1000);
+                    await Task.Delay(100);
                 }
             });
 
