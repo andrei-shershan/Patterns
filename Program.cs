@@ -59,6 +59,9 @@ namespace Patterns
 
             var observerCase = new ObserverCase();
             observerCase.Run();
+
+            var stateCase = new StateCase();
+            stateCase.Run();
         }
     }
 }
